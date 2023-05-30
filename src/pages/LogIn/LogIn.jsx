@@ -5,7 +5,6 @@ import Basic from '../../layouts/Basic/Basic';
 const LogIn = () => {
      return (
           <>
-               <h1>Login Page</h1>
                <Basic>
                     <ProductContainer />
                     <LogInForm />

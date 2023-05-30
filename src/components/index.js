@@ -17,6 +17,8 @@ import ProfileCard from './ProfileCard/ProfileCard';
 import ContainerNavigationButton from './ContainerNavigationButton/ContainerNavigationButton';
 import CategoryCard from './CategoryCard/CategoryCard';
 import SignUpForm from './SignUpFrom/SignUpForm';
+import DropDown from './DropDown/DropDown';
+
 export {
      Header,
      TopBar,
@@ -37,4 +39,5 @@ export {
      ProfileCard,
      ContainerNavigationButton,
      CategoryCard,
+     DropDown,
 };
