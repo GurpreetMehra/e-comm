@@ -3,32 +3,34 @@
 .footer-list {
      display: flex;
      flex-direction: column;
-     .h {
-          color: aliceblue;
+     h1 {
+          color: colors.$light-white;
+          font-size: 1.8rem;
      }
      a {
           color: colors.$light-white;
-          border-bottom: 1px solid transparent;
+          border-bottom: 0.1rem solid transparent;
           padding-bottom: 0.2rem;
           text-decoration: none;
-          font-size: 1.2rem;
-          margin-bottom: 1.5rem;
+          font-size: 1.4rem;
+          margin-bottom: 1.6rem;
+          width: 17.1rem;
      }
 
      a:hover {
           color: colors.$light-white;
           text-decoration: none;
-          border-bottom: 1px solid colors.$light-white;
+          border-bottom: 0.1rem solid colors.$light-white;
           cursor: pointer;
      }
      .input-container {
-          border: 1px solid colors.$light-white;
+          border: 0.1rem solid colors.$light-white;
           border-radius: 0.5rem;
           display: flex;
-          padding-top: 10px;
-          padding-right: 5px;
-          padding-bottom: 10px;
-          padding-left: 10px;
+          padding-top: 1rem;
+          padding-right: 0.5rem;
+          padding-bottom: 1rem;
+          padding-left: 1rem;
           input {
                background-color: colors.$black;
                outline: none;

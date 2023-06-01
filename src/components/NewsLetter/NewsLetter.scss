@@ -1,0 +1,23 @@
+@use '../../constants/colors';
+
+.footer-input-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 0.05rem solid colors.$light-white;
+     padding-top: 1rem;
+     padding-right: 1rem;
+     padding-left: 1rem;
+     padding-bottom: 1rem;
+     border-radius: 0.5rem;
+     input {
+          border: none;
+          background-color: colors.$black;
+          color: colors.$gary-light;
+          outline: none;
+          width: 13rem;
+     }
+     img {
+          height: 1.8rem;
+     }
+}

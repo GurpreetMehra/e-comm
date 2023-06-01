@@ -8,11 +8,11 @@ const FooterList = (props) => {
      return (
           <>
                <div className="footer-list">
-                    <h1 className="h">{props.heading}</h1>
+                    <h1>{props.heading}</h1>
                     {props.items.map((list) => {
                          return (
                               <Link key={list.name} to={list.link}>
-                                   {list.listName}
+                                   {list.title}
                               </Link>
                          );
                     })}

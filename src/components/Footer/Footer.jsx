@@ -1,60 +1,84 @@
 import FooterList from '../FooterList/FooterList';
+import GroupIcon from '../../assets/icons/Group.png';
 import './Footer.scss';
+import NewsLetter from '../NewsLetter/NewsLetter';
+import SocialLink from '../SocialLink/SocialLink';
 const Footer = () => {
-     const QuickLink = [
+     const exclusiveList = [
           {
-               listName: 'Privacy Policy',
+               title: 'Subscribe',
                link: '#',
           },
 
           {
-               listName: 'Terms Of Use',
+               title: 'Get 10% off your first order',
                link: '#',
           },
           {
-               listName: 'FAQ',
-               link: '#',
-          },
-          {
-               listName: 'Contact',
+               title: <NewsLetter />,
                link: '#',
           },
      ];
-     const Account = [
+     const quickLinkList = [
           {
-               listName: 'My Account',
+               title: 'Privacy Policy',
                link: '#',
           },
 
           {
-               listName: 'Login / Register',
+               title: 'Terms Of Use',
                link: '#',
           },
           {
-               listName: 'Cart',
+               title: 'FAQ',
                link: '#',
           },
           {
-               listName: 'Wishlist',
+               title: 'Contact',
+               link: '#',
+          },
+     ];
+     const accountList = [
+          {
+               title: 'My Account',
+               link: '#',
+          },
+
+          {
+               title: 'Login / Register',
                link: '#',
           },
           {
-               listName: 'Shop',
+               title: 'Cart',
+               link: '#',
+          },
+          {
+               title: 'Wishlist',
+               link: '#',
+          },
+          {
+               title: 'Shop',
                link: '#',
           },
      ];
      const supportList = [
           {
-               listName: '111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.',
-               link: '/asda',
+               title: '111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.',
+               link: '#',
           },
 
           {
-               listName: 'exclusive@gmail.com',
-               link: '123123',
+               title: 'exclusive@gmail.com',
+               link: '#',
           },
           {
-               listName: '+88015-88888-9999',
+               title: '+88015-88888-9999',
+               link: '#',
+          },
+     ];
+     const downloadAppList = [
+          {
+               title: <SocialLink />,
                link: '#',
           },
      ];
@@ -62,9 +86,26 @@ const Footer = () => {
      return (
           <>
                <div className="footer-container">
-                    <FooterList items={supportList} heading={'Support'} />
-                    <FooterList items={Account} heading={'Account'} />
-                    <FooterList items={QuickLink} heading={'Quick Link'} />
+                    <div className="footer-list-container">
+                         <FooterList
+                              items={exclusiveList}
+                              heading={'Exclusive'}
+                         />
+                         <FooterList items={supportList} heading={'Support'} />
+                         <FooterList items={accountList} heading={'Account'} />
+                         <FooterList
+                              items={quickLinkList}
+                              heading={'Quick Link'}
+                         />
+                         <FooterList
+                              items={downloadAppList}
+                              heading={'Download App'}
+                         />
+                    </div>
+                    <p>
+                         <img src={GroupIcon} />
+                         <div>Copyright Rimel 2022. All right reserved</div>
+                    </p>
                </div>
           </>
      );
