@@ -1,0 +1,39 @@
+@use '../../constants/colors';
+
+.footer-list {
+     display: flex;
+     flex-direction: column;
+     .h {
+          color: aliceblue;
+     }
+     a {
+          color: colors.$light-white;
+          border-bottom: 1px solid transparent;
+          padding-bottom: 0.2rem;
+          text-decoration: none;
+          font-size: 1.2rem;
+          margin-bottom: 1.5rem;
+     }
+
+     a:hover {
+          color: colors.$light-white;
+          text-decoration: none;
+          border-bottom: 1px solid colors.$light-white;
+          cursor: pointer;
+     }
+     .input-container {
+          border: 1px solid colors.$light-white;
+          border-radius: 0.5rem;
+          display: flex;
+          padding-top: 10px;
+          padding-right: 5px;
+          padding-bottom: 10px;
+          padding-left: 10px;
+          input {
+               background-color: colors.$black;
+               outline: none;
+               border: none;
+               color: colors.$light-gray;
+          }
+     }
+}

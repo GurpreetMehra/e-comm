@@ -1,7 +1,24 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+import { Link } from 'react-router-dom';
 import './FooterList.scss';
-const FooterList = () => {
-     return <div>FooterList</div>;
+
+// import Send from '../../assets/icons/send.png';
+
+const FooterList = (props) => {
+     return (
+          <>
+               <div className="footer-list">
+                    <h1 className="h">{props.heading}</h1>
+                    {props.items.map((list) => {
+                         return (
+                              <Link key={list.name} to={list.link}>
+                                   {list.listName}
+                              </Link>
+                         );
+                    })}
+               </div>
+          </>
+     );
 };
 
 export default FooterList;
