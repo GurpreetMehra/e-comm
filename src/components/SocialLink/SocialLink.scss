@@ -1,3 +1,9 @@
+@use '../../constants/colors';
+
+.social-link-container {
+     font-size: 1rem;
+     color: colors.$gary-light;
+}
 .app-store-icon {
      display: flex;
      justify-content: center;
@@ -20,5 +26,9 @@
      justify-content: space-between;
      align-items: center;
      padding-top: 3.4rem;
-     padding-right: 2rem;
+     padding-right: 1rem;
+}
+.store {
+     display: flex;
+     flex-direction: column;
 }

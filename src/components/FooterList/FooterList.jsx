@@ -2,17 +2,18 @@
 import { Link } from 'react-router-dom';
 import './FooterList.scss';
 
-// import Send from '../../assets/icons/send.png';
-
-const FooterList = (props) => {
+const FooterList = ({ heading, items }) => {
      return (
           <>
                <div className="footer-list">
-                    <h1>{props.heading}</h1>
-                    {props.items.map((list) => {
+                    <h1>{heading}</h1>
+                    {items.map(({ title, link, component }) => {
+                         if (component) {
+                              return <div key={title}>{component}</div>;
+                         }
                          return (
-                              <Link key={list.name} to={list.link}>
-                                   {list.title}
+                              <Link key={title} to={link}>
+                                   {title}
                               </Link>
                          );
                     })}

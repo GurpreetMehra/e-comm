@@ -1,111 +1,57 @@
 import FooterList from '../FooterList/FooterList';
 import GroupIcon from '../../assets/icons/Group.png';
 import './Footer.scss';
-import NewsLetter from '../NewsLetter/NewsLetter';
-import SocialLink from '../SocialLink/SocialLink';
+import {
+     accountList,
+     downloadAppList,
+     exclusiveList,
+     quickLinkList,
+     supportList,
+} from '../../assets/Data/Footer';
+
 const Footer = () => {
-     const exclusiveList = [
+     const footerList = [
           {
-               title: 'Subscribe',
-               link: '#',
-          },
-
-          {
-               title: 'Get 10% off your first order',
-               link: '#',
+               list: exclusiveList,
+               heading: 'Exclusive',
           },
           {
-               title: <NewsLetter />,
-               link: '#',
-          },
-     ];
-     const quickLinkList = [
-          {
-               title: 'Privacy Policy',
-               link: '#',
-          },
-
-          {
-               title: 'Terms Of Use',
-               link: '#',
+               list: supportList,
+               heading: 'Support',
           },
           {
-               title: 'FAQ',
-               link: '#',
+               list: accountList,
+               heading: 'Account',
           },
           {
-               title: 'Contact',
-               link: '#',
+               list: quickLinkList,
+               heading: 'Quick Link',
+          },
+          {
+               list: downloadAppList,
+               heading: 'Download App',
           },
      ];
-     const accountList = [
-          {
-               title: 'My Account',
-               link: '#',
-          },
-
-          {
-               title: 'Login / Register',
-               link: '#',
-          },
-          {
-               title: 'Cart',
-               link: '#',
-          },
-          {
-               title: 'Wishlist',
-               link: '#',
-          },
-          {
-               title: 'Shop',
-               link: '#',
-          },
-     ];
-     const supportList = [
-          {
-               title: '111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.',
-               link: '#',
-          },
-
-          {
-               title: 'exclusive@gmail.com',
-               link: '#',
-          },
-          {
-               title: '+88015-88888-9999',
-               link: '#',
-          },
-     ];
-     const downloadAppList = [
-          {
-               title: <SocialLink />,
-               link: '#',
-          },
-     ];
-
      return (
           <>
                <div className="footer-container">
                     <div className="footer-list-container">
-                         <FooterList
-                              items={exclusiveList}
-                              heading={'Exclusive'}
-                         />
-                         <FooterList items={supportList} heading={'Support'} />
-                         <FooterList items={accountList} heading={'Account'} />
-                         <FooterList
-                              items={quickLinkList}
-                              heading={'Quick Link'}
-                         />
-                         <FooterList
-                              items={downloadAppList}
-                              heading={'Download App'}
-                         />
+                         {footerList.map((item) => {
+                              return (
+                                   <FooterList
+                                        key={item.heading}
+                                        items={item.list}
+                                        heading={item.heading}
+                                   />
+                              );
+                         })}
                     </div>
-                    <p>
+                    <div className="copyright">
                          <img src={GroupIcon} />
-                         <div>Copyright Rimel 2022. All right reserved</div>
-                    </p>
+                         <div className="copyright-text">
+                              Copyright Rimel 2022. All right reserved
+                         </div>
+                    </div>
                </div>
           </>
      );

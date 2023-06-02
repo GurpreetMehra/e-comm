@@ -9,11 +9,11 @@ import LinktingIcon from '../../assets/icons/linkting.png';
 const SocialLink = () => {
      return (
           <>
-               <div>
+               <div className="social-link-container">
                     Save $3 with App New User Only
                     <div className="app-store-icon">
                          <img className="qr" src={QrIcon} />
-                         <div>
+                         <div className="store">
                               <img className="playstore" src={PlaystoreIcon} />
                               <img className="appstore" src={AppstoreIcon} />
                          </div>
