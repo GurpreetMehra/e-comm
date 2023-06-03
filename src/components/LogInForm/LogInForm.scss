@@ -1,0 +1,35 @@
+@use '../../constants/colors';
+
+.login-form-container {
+     margin-top: 6rem;
+     .heading {
+          h1 {
+               font-size: 3rem;
+               margin: 0px;
+               letter-spacing: 0.1px;
+               margin-bottom: 1.4rem;
+          }
+          h3 {
+               font-size: 1.2rem;
+               letter-spacing: 0.1rem;
+               margin: 0px;
+               margin-bottom: 3rem;
+          }
+     }
+     .login-button {
+          width: 10rem;
+          background-color: colors.$light-red;
+          border: none;
+          height: 4.6rem;
+          color: white;
+          border-radius: 0.4rem;
+          margin-bottom: 1rem;
+     }
+
+     .link {
+          margin-top: 1rem;
+          a {
+               color: colors.$light-red;
+          }
+     }
+}

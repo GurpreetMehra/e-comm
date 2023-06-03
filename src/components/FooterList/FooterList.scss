@@ -9,7 +9,6 @@
      }
      a {
           color: colors.$light-white;
-          border-bottom: 0.1rem solid transparent;
           padding-bottom: 0.6rem;
           text-decoration: none;
           font-size: 1.4rem;
@@ -17,12 +16,6 @@
           width: 17.1rem;
      }
 
-     a:hover {
-          color: colors.$light-white;
-          text-decoration: none;
-          border-bottom: 0.1rem solid colors.$light-white;
-          cursor: pointer;
-     }
      .input-container {
           border: 0.1rem solid colors.$light-white;
           border-radius: 0.5rem;

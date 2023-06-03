@@ -1,0 +1,13 @@
+@use '../../constants/colors';
+
+.buttons {
+     .button {
+          width: 28rem;
+          background-color: colors.$light-red;
+          border: none;
+          height: 4rem;
+          color: colors.$light-white;
+          border-radius: 0.4rem;
+          margin-bottom: 1rem;
+     }
+}

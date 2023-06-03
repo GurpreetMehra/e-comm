@@ -1,0 +1,13 @@
+@use '../../constants/colors';
+
+.input-container {
+     width: 28rem;
+     border-bottom: 1px solid colors.$gary-light;
+     margin-bottom: 4rem;
+     input {
+          margin-bottom: 0.8rem;
+          border: none;
+          outline: none;
+          width: 28rem;
+     }
+}

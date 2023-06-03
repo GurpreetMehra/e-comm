@@ -1,14 +1,15 @@
-import React from 'react';
 import './SignUp.scss';
-import { ProductContainer, SignUpForm } from '../../components';
+import { SignUpForm } from '../../components';
+import ImgWithform from '../../layouts/ImgWithform/ImgWithform';
+
 import Basic from '../../layouts/Basic/Basic';
 const SignUp = () => {
      return (
           <>
-               <h1>Sign Up Page</h1>
                <Basic>
-                    <ProductContainer />
-                    <SignUpForm />
+                    <ImgWithform>
+                         <SignUpForm />
+                    </ImgWithform>
                </Basic>
           </>
      );

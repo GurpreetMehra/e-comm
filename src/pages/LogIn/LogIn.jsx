@@ -1,13 +1,14 @@
-import React from 'react';
 import './LogIn.scss';
-import { ProductContainer, LogInForm } from '../../components';
+import { LogInForm } from '../../components';
 import Basic from '../../layouts/Basic/Basic';
+import ImgWithform from '../../layouts/ImgWithform/ImgWithform';
 const LogIn = () => {
      return (
           <>
                <Basic>
-                    <ProductContainer />
-                    <LogInForm />
+                    <ImgWithform>
+                         <LogInForm />
+                    </ImgWithform>
                </Basic>
           </>
      );

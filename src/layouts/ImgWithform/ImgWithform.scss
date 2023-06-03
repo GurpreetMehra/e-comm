@@ -1,0 +1,26 @@
+.container {
+     display: flex;
+     justify-content: space-evenly;
+     margin-top: 5rem;
+     margin-bottom: 5rem;
+     .img-bar {
+          width: 30rem;
+          display: flex;
+          justify-content: center;
+     }
+     .img-container {
+          height: 60rem;
+     }
+     .form-container {
+          width: 30rem;
+          display: flex;
+          justify-content: center;
+     }
+     .form {
+          width: 30rem;
+          display: flex;
+          justify-content: center;
+          margin-top: 9rem;
+          margin-bottom: 9rem;
+     }
+}

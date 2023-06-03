@@ -18,6 +18,7 @@ import ContainerNavigationButton from './ContainerNavigationButton/ContainerNavi
 import CategoryCard from './CategoryCard/CategoryCard';
 import SignUpForm from './SignUpFrom/SignUpForm';
 import DropDown from './DropDown/DropDown';
+import Input from './Input/Input';
 
 export {
      Header,
@@ -40,4 +41,5 @@ export {
      ContainerNavigationButton,
      CategoryCard,
      DropDown,
+     Input,
 };

@@ -1,0 +1,41 @@
+@use '../../constants/colors';
+
+.signin-form-container {
+     .heading {
+          h1 {
+               font-size: 3rem;
+               margin: 0px;
+               letter-spacing: 0.1rem;
+               margin-bottom: 1.4rem;
+          }
+          h3 {
+               font-size: 1.2rem;
+               letter-spacing: 0.1rem;
+               margin: 0px;
+               margin-bottom: 3rem;
+          }
+     }
+
+     .links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .first-link {
+               margin-right: 0.8rem;
+               color: colors.$gary-light;
+               text-decoration: none;
+          }
+          .second-link {
+               color: colors.$black;
+               text-decoration: none;
+               border-bottom: 1px solid transparent;
+               padding-bottom: 0.2rem;
+          }
+          .second-link:hover {
+               color: colors.$black;
+               text-decoration: none;
+               border-bottom: 1px solid colors.$black;
+               cursor: pointer;
+          }
+     }
+}
