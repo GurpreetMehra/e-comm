@@ -5,19 +5,17 @@ const Input = (props) => {
      return (
           <>
                <div className="input-container">
-                    <input
-                         type=""
-                         onChange={props.onChange}
-                         placeholder={props.Placeholder}
-                         value={props.value}
-                    />
+                    <input {...props} />
                </div>
           </>
      );
 };
 Input.propTypes = {
-     Placeholder: Proptypes.string,
+     placeholder: Proptypes.string,
+     name: Proptypes.string,
+     value: Proptypes.string,
+     type: Proptypes.string,
      onChange: Proptypes.function,
-     value: Proptypes.state,
+     email: Proptypes.state,
 };
 export default Input;
