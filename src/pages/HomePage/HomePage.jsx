@@ -11,10 +11,11 @@ import Basic from '../../layouts/Basic/Basic';
 const HomePage = () => {
      return (
           <>
-               <h1>HomePage</h1>
                <Basic>
-                    <Carousal />
+                    <div className='navBar-carusal'>
                     <VerticalNavBar />
+                    <Carousal  />
+                    </div>
                     <ProductCard />
                     <IconWithText />
                     <ImageWithText />

@@ -1,0 +1,15 @@
+@use '../../constants/colors';
+
+.verticalNavBar-container{
+padding-top: 25px;
+padding-right: 130px;
+padding-left: 70px;
+font-size: 10px;
+border-right:0.02rem solid colors.$border-color;
+margin-right: 60px;
+.text{
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+margin-bottom: 80px;
+}

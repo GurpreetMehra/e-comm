@@ -1,7 +1,12 @@
-import React from 'react';
 import './ProductCard.scss';
+
 const ProductCard = () => {
-     return <div>ProductCard</div>;
+     return (<>
+     <div className='productCard-container'>
+     ProductCard
+          </div>
+     </>
+     )
 };
 
 export default ProductCard;

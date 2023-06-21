@@ -1,7 +1,7 @@
-import React from 'react';
-import './ImageWithText.scss';
+import "./ImageWithText.scss";
+
 const ImageWithText = () => {
-     return <div>ImageWithText</div>;
+  return <div>ImageWithText</div>;
 };
 
 export default ImageWithText;

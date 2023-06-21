@@ -14,7 +14,9 @@ import {
 } from './pages';
 import routesUrl from './constants/routeUrls';
 
+
 const router = createBrowserRouter([
+  
      {
           path: routesUrl.home,
           element: <HomePage />,

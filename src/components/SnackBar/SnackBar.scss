@@ -1,0 +1,23 @@
+.main-snackBar{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .snackBar{
+        width: 18rem;
+        height: 30px;
+    background-color: red;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    
+    border-radius: 3px;
+    color: white;
+    position: fixed;
+    .icon{
+        height: 50%;
+        margin-right: 8px;
+        margin-left: 20px;
+    }
+    }
+}

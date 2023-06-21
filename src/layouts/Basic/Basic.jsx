@@ -1,19 +1,20 @@
-import Proptypes from 'prop-types';
-import { TopBar, Header, Footer } from '../../components';
+import Proptypes from "prop-types";
+import { TopBar, Header, Footer, SnackBar } from "../../components";
 
 const Basic = ({ children }) => {
-     return (
-          <>
-               <TopBar />
-               <Header />
-               {children}
-               <Footer />
-          </>
-     );
+  return (
+    <>
+      <TopBar />
+      <Header />
+      <SnackBar />
+      {children}
+      <Footer />
+    </>
+  );
 };
 
 Basic.propTypes = {
-     children: Proptypes.any,
+  children: Proptypes.any,
 };
 
 export default Basic;
