@@ -30,10 +30,10 @@ const SignUpForm = () => {
     );
     const error = data.data.error;
     setError(error);
-    console.log("error", error);
     setLoading(false);
     navigate("/login");
   };
+
   return (
     <>
       <div className="signin-form-container">

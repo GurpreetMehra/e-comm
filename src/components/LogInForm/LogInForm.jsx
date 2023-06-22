@@ -7,8 +7,9 @@ import axios from "axios";
 import RootContext from "../../context/root/RootContext";
 
 const LogInForm = () => {
-  const { userState } = useContext(RootContext);
+  const { userState, useError } = useContext(RootContext);
   const [user, setUser] = userState;
+  const [error, setError] = useError;
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -28,6 +29,8 @@ const LogInForm = () => {
     );
     const userData = data.data.user;
     setUser(userData);
+    const error = data.data.error;
+    setError(error);
     setLoading(false);
   };
 
