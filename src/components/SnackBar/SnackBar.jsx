@@ -11,7 +11,7 @@ const SnackBar = () => {
   };
   setTimeout(() => {
     setError(null);
-  }, 3000);
+  }, 5000);
 
   if (!error) return null;
   return (

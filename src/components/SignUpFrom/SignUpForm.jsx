@@ -24,14 +24,17 @@ const SignUpForm = () => {
 
   const handleOnClick = async () => {
     setLoading(true);
-    const data = await axios.post(
-      "http://localhost:4000/users/signup",
-      formData
-    );
-    const error = data.data.error;
-    setError(error);
+    try {
+      const data = await axios.post(
+        "http://localhost:4000/users/signup",
+        formData
+      );
+      navigate("/login");
+    } catch (error) {
+      const tamError = error?.response?.data?.error || "Something went wrong";
+      setError(tamError);
+    }
     setLoading(false);
-    navigate("/login");
   };
 
   return (
