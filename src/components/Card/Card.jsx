@@ -1,7 +1,11 @@
 import "./Card.scss";
 
 const Card = () => {
-  return <>Card</>;
+  return (
+    <>
+      <div>card</div>
+    </>
+  );
 };
 
 export default Card;

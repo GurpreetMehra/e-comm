@@ -1,37 +1,46 @@
-import { useEffect, useState } from 'react';
-import SideImg from '../../assets/icons/sideimg.png';
-import SideImgTwo from '../../assets/icons/sideimgtwo.png';
+import { useEffect, useRef, useState } from "react";
+import SideImg from "../../assets/icons/sideimg.png";
+import SideImgTwo from "../../assets/icons/sideimgtwo.png";
 
+import "./Carousal.scss";
 
-import './Carousal.scss';
+// let scrollFunc;
+
+// setInterval(() => {
+//   console.log("ASds");
+//   if (scrollFunc) scrollFunc();
+// }, 1000);
 const Carousal = () => {
-     const [selectedImg , setSelectedImg] = useState(0)
-     const [allImg , setAllImg] = useState([SideImg , SideImgTwo])
+  const carousalRef = useRef(null);
+  const [scroll, setScroll] = useState(0);
 
-     // useEffect(() => {
-     //      setInterval (() => {
-     //           setSelectedImg(selectedImg => selectedImg < 2 ? selectedImg + 1 : 0)
-     //      },3000)
-     // },[])
+  //   console.log(scroll);
 
-     return(<>
-     <div className='carousal'>
-<img src={allImg[selectedImg]}/>
-     </div>;
-     <button onClick={()=>{
+  //   useEffect(() => {
+  //     scrollFunc = () => setScroll(scroll + 10);
+  //   }, []);
 
-if (selectedImg>0) {
-     setSelectedImg(selectedImg-1)
-}
-}}>prev</button>
-     <button onClick={()=>{
+  useEffect(() => {
+    carousalRef.current.scrollLeft = scroll;
+  }, [scroll]);
 
-          if (selectedImg<allImg.length-1) {
-               setSelectedImg(selectedImg+1)
-          }
-     }}>next</button>
-     
-     </>)
+  return (
+    <>
+      <div ref={carousalRef} className="carousal-container">
+        <div className="carousal-bar">
+          <div className="carousal-1">
+            <img src={SideImg} />
+          </div>
+          <div className="carousal-2">
+            <img src={SideImgTwo} />
+          </div>
+          <div className="carousal-3">
+            <img src={SideImg} />
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Carousal;

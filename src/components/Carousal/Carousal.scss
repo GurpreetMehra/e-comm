@@ -1,9 +1,29 @@
-.carousal{
-   
+.carousal-container{
     height: 280px;
     width: 800px;
 margin-top: 30px;
-img{
-    height: 100%;
+display: flex;
+overflow-y: scroll;
+.carousal-bar{
+    width: 2400px;
+    height: 280px;
+    background-color: black;
+    display: flex;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+    .carousal-1{background-color: yellow;
+        width: 800px;     height: 280px;
+      
+    }
+    .carousal-2{background-color: red;width: 800px;    height: 280px;
+    }
+    .carousal-3{background-color: green;width: 800px;     height: 280px;}
+    .indicators{
+        display: flex;
+        position: absolute;
+        bottom: 1rem;
+    }
 }
 }

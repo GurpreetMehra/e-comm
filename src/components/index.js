@@ -22,6 +22,8 @@ import Input from "./Input/Input";
 import Card from "./Card/Card";
 import Loading from "./Loding/Loding";
 import SnackBar from "./SnackBar/SnackBar";
+import StarRating from "./ProductCard/StarRating/StarRating";
+
 export {
   Header,
   TopBar,
@@ -47,4 +49,5 @@ export {
   Input,
   Loading,
   SnackBar,
+  StarRating,
 };

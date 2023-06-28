@@ -1,5 +1,5 @@
 import "./LogInForm.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import react, { useContext, useState } from "react";
@@ -18,19 +18,25 @@ const LogInForm = () => {
     formData[event.target.name] = event.target.value;
     setFormData(structuredClone(formData));
   };
+  const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
 
   const handleOnClick = async () => {
     setLoading(true);
-    const data = await axios.post(
-      "http://localhost:4000/users/login",
-      formData
-    );
-    const userData = data.data.user;
-    setUser(userData);
-    const error = data.data.error;
-    setError(error);
+    try {
+      const data = await axios.post(
+        "http://localhost:4000/users/login",
+        formData
+      );
+      const userData = data.data.user;
+      console.log(userData);
+      setUser(userData);
+      navigate("/home");
+    } catch (error) {
+      const tamError = error?.response?.data?.error || "Something went wrong";
+      setError(tamError);
+    }
     setLoading(false);
   };
 
