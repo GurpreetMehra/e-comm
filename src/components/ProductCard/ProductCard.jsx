@@ -1,22 +1,27 @@
 import "./ProductCard.scss";
 import Card from "../../assets/icons/Vector.png";
+import StarRating from "./StarRating/StarRating";
 
-const ProductCard = ({ title, link, img, text, star }) => {
+const ProductCard = ({
+  data: { name, price, rating, salePercentage, isOnSale, Images },
+}) => {
   return (
     <>
       <>
         <div className="card">
           <div className="card-img-top">
-            <div className="sale-bar">-40%</div>
+            {isOnSale && <div className="sale-bar">{salePercentage}%</div>}
             <img className="imgs" src={Card} />
             <div className="img-bar">
-              <img className="img-card" src={img} alt="Card image cap" />
+              <img className="img-card" src={Images[0]} alt="Card image cap" />
             </div>
           </div>
           <div className="card-body">
-            <h5 className="card-title">{title}</h5>
-            <p className="card-text">{text}</p>
-            <div>{star}</div>
+            <h5 className="card-title">{name}</h5>
+            <p className="card-text">${price}</p>
+            <div className="rating-star">
+              <StarRating rating={rating} />({rating + " " + "Stars"})
+            </div>
           </div>
         </div>
       </>

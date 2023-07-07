@@ -2,14 +2,16 @@ import "./StarRating.scss";
 import React, { Component, useState } from "react";
 import BeautyStars from "beauty-stars";
 
-const StarRating = () => {
-  const [star, setStar] = useState({ value: 0 });
+const StarRating = (props) => {
+  const [star, setStar] = useState({ value: props.rating });
   return (
     <>
-      <div>
+      <div className="stars">
         <BeautyStars
           value={star.value}
-          onChange={(value) => setStar({ value })}
+          gap="2px"
+          editable={false}
+          size="10px"
         />
       </div>
     </>

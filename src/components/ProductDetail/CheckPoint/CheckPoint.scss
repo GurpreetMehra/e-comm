@@ -1,0 +1,41 @@
+.checkPoint-container {
+  height: 140px;
+  width: 300px;
+  border: 1px solid gray;
+  border-radius: 3px;
+
+  .freeDelivery {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px solid gray;
+    .free-icon {
+      img {
+        width: 35px;
+        margin-right: 10px;
+        margin-left: 15px;
+      }
+    }
+    .text {
+      margin-top: 5px;
+      font-size: 7px;
+    }
+  }
+  .retuneDelivery {
+    display: flex;
+    align-items: center;
+    height: 70px;
+
+    .free-icon {
+      img {
+        width: 35px;
+        margin-right: 10px;
+        margin-left: 15px;
+      }
+    }
+    .text {
+      margin-top: 5px;
+      font-size: 7px;
+    }
+  }
+}
