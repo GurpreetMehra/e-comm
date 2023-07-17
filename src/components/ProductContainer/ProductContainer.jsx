@@ -9,14 +9,21 @@ const ProductContainer = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/products").then((data) => {
-      setProducts(data.data.productData);
-    });
+    product();
   }, []);
 
-  // const product = async () => {
-  //   console.log(product);
-  // };
+  const product = async () => {
+    axios.get("http://localhost:4000/products").then((data) => {
+      setProducts([...data.data.productData]);
+    });
+  };
+
+  const onClick = (id) => {
+    axios.post("http://localhost:4000/products/wishList", {
+      wishlistProductId: id,
+    });
+    product();
+  };
 
   const renderTimeComponent = () => {
     return (
@@ -62,7 +69,7 @@ const ProductContainer = () => {
         </div>
         <div className="cards">
           {products.map((data) => {
-            return <ProductCard data={data} />;
+            return <ProductCard key={data.id} data={data} onClick={onClick} />;
           })}
         </div>
         <div className="product-button">

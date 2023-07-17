@@ -6,6 +6,7 @@ import productTwo from "../../assets/icons/image 57.png";
 import productThree from "../../assets/icons/image 59.png";
 import StarRating from "../ProductCard/StarRating/StarRating";
 import { useState } from "react";
+import axios from "axios";
 import CheckPoint from "./CheckPoint/CheckPoint";
 
 const ProductDetail = () => {
@@ -62,7 +63,10 @@ const ProductDetail = () => {
 
   const renderBuyComponent = () => {
     const [num, setNum] = useState(0);
-
+    const handleOnClick = () => {
+      const data = axios.post("http://localhost:4000/products/wishList");
+      console.log(data);
+    };
     return (
       <div className="buy-bar">
         <div className="equity">
@@ -77,7 +81,7 @@ const ProductDetail = () => {
         <button>
           <b>Buy One</b>
         </button>
-        <div className="heart-icon">
+        <div onClick={handleOnClick} className="heart-icon">
           <img src={heart} />
         </div>
       </div>

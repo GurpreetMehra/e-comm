@@ -5,9 +5,13 @@ import Button from "../Button/Button";
 import react, { useContext, useState } from "react";
 import axios from "axios";
 import RootContext from "../../context/root/RootContext";
+import { useCookies } from "react-cookie";
+import interceptor from "../../utils/Interceptor";
 
 const LogInForm = () => {
   const { userState, useError } = useContext(RootContext);
+  const [cookies, setCookie] = useCookies(["token"]);
+
   const [user, setUser] = userState;
   const [error, setError] = useError;
   const [formData, setFormData] = useState({
@@ -30,10 +34,13 @@ const LogInForm = () => {
         formData
       );
       const userData = data.data.user;
-      console.log(userData);
+      const token = data.data.user.token;
       setUser(userData);
+      interceptor(token);
+      setCookie("token", token, { path: "/" });
       navigate("/home");
     } catch (error) {
+      console.log(error);
       const tamError = error?.response?.data?.error || "Something went wrong";
       setError(tamError);
     }

@@ -1,71 +1,74 @@
-@use '../../constants/colors';
+@use "../../constants/colors";
 .nav-bar-container {
-     display: flex;
-     padding-left: 9.5rem;
-     padding-right: 9.5rem;
-     padding-top: 3rem;
-     padding-bottom: 1.5rem;
-     border-bottom: 0.02rem solid colors.$border-color;
+  display: flex;
+  padding-left: 9.5rem;
+  padding-right: 9.5rem;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.02rem solid colors.$border-color;
 }
 .left-container {
-     flex: 2;
-     display: flex;
-     align-items: center;
-     justify-content: space-around;
-     .logo {
-          display: flex;
-          font-size: 3rem;
-     }
-     .navigation-bar {
-          display: flex;
-          gap: 3rem;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .logo {
+    display: flex;
+    font-size: 3rem;
+  }
+  .navigation-bar {
+    display: flex;
+    gap: 3rem;
 
-          a {
-               color: colors.$black;
-               border-bottom: 1px solid transparent;
-               padding-bottom: 0.2rem;
-               text-decoration: none;
-               font-size: 1.8rem;
-          }
+    a {
+      color: colors.$black;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 0.2rem;
+      text-decoration: none;
+      font-size: 1.8rem;
+    }
 
-          a:hover {
-               color: colors.$black;
-               text-decoration: none;
-               border-bottom: 1px solid colors.$black;
-               cursor: pointer;
-          }
-     }
+    a:hover {
+      color: colors.$black;
+      text-decoration: none;
+      border-bottom: 1px solid colors.$black;
+      cursor: pointer;
+    }
+  }
 }
 .right-container {
-     flex: 1;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-     .seach-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 0.7rem 1.2rem 0.7rem 2rem;
-          background: colors.$light-gray;
-          border-radius: 0.5rem;
-          gap: 10px;
-          input {
-               border: none;
-               background: colors.$light-gray;
-               outline: none;
-               font-size: 1.2rem;
-          }
-          img {
-               height: 1.8rem;
-          }
-     }
-     .header-icon-container {
-          margin-left: 3rem;
-          display: flex;
-          align-items: center;
-          img {
-               margin-right: 1rem;
-          }
-     }
+  .seach-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem 1.2rem 0.7rem 2rem;
+    background: colors.$light-gray;
+    border-radius: 0.5rem;
+    gap: 10px;
+    input {
+      border: none;
+      background: colors.$light-gray;
+      outline: none;
+      font-size: 1.2rem;
+    }
+    img {
+      height: 1.8rem;
+    }
+  }
+  .header-icon-container {
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    .heart {
+      width: 25px;
+    }
+    img {
+      margin-right: 1rem;
+    }
+  }
 }

@@ -3,15 +3,20 @@ import Card from "../../assets/icons/Vector.png";
 import StarRating from "./StarRating/StarRating";
 
 const ProductCard = ({
-  data: { name, price, rating, salePercentage, isOnSale, Images },
+  onClick,
+  data: { id, name, price, rating, salePercentage, isLiked, isOnSale, Images },
 }) => {
+  const click = () => {
+    onClick(id);
+  };
   return (
     <>
       <>
-        <div className="card">
+        <div key={id} className="card">
+          <h1>{isLiked.toString()}</h1>
           <div className="card-img-top">
             {isOnSale && <div className="sale-bar">{salePercentage}%</div>}
-            <img className="imgs" src={Card} />
+            <img className="imgs" onClick={click} src={Card} />
             <div className="img-bar">
               <img className="img-card" src={Images[0]} alt="Card image cap" />
             </div>
