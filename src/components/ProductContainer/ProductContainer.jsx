@@ -18,8 +18,8 @@ const ProductContainer = () => {
     });
   };
 
-  const onClick = (id) => {
-    axios.post("http://localhost:4000/products/wishList", {
+  const onClick = async (id) => {
+    await axios.post("http://localhost:4000/products/wishList", {
       wishlistProductId: id,
     });
     product();

@@ -1,10 +1,16 @@
 import axios from "axios";
 
-const interceptor = (data) => {
-  axios.interceptors.request.use((config) => {
-    config.headers.authorization = data;
-    return config;
-  });
+const interceptor = (token) => {
+  console.log({ token });
+  axios.interceptors.request.use(
+    function (config) {
+      config.headers.authorization = token;
+      return config;
+    },
+    function (error) {
+      return Promise.reject(error);
+    }
+  );
 };
 
 export default interceptor;
